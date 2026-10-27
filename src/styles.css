@@ -1,0 +1,1808 @@
+/* ========================================
+   SIGI-010 | ESTILOS INSTITUCIONALES
+   Unidad Ejecutora N.º 010
+   VIII DIRTEPOL Huancayo
+======================================== */
+
+/* 1. VARIABLES GENERALES */
+:root {
+  --verde-oscuro: #034936;
+  --verde-principal: #087557;
+  --verde-claro: #0a8f68;
+  --verde-fondo: #edf3ef;
+  --dorado: #d4af37;
+  --gris-fondo: #f3f6f4;
+  --gris-texto: #52645a;
+  --blanco: #ffffff;
+  --negro-suave: #1f2925;
+  --borde-suave: #e1e9e4;
+  --sombra-suave: 0 8px 24px rgba(3, 73, 54, 0.08);
+}
+
+/* 2. CONFIGURACIÓN GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--gris-fondo);
+  color: var(--negro-suave);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+button,
+a {
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--dorado);
+}
+
+/* 3. ENCABEZADO INSTITUCIONAL */
+.header-institucional {
+  position: relative;
+  z-index: 10;
+  padding: 16px 0;
+  background: var(--blanco);
+  border-bottom: 3px solid var(--dorado);
+  box-shadow: 0 4px 18px rgba(3, 73, 54, 0.06);
+}
+
+.header-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header-identidad {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-logo {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  color: var(--blanco);
+  background: linear-gradient(145deg, var(--verde-principal), var(--verde-oscuro));
+  border: 3px solid var(--dorado);
+  border-radius: 50%;
+  box-shadow: 0 5px 14px rgba(3, 73, 54, 0.18);
+}
+
+.header-logo span {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.header-superior {
+  margin-bottom: 3px;
+  color: var(--verde-principal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.header-identidad h1 {
+  margin: 0 0 3px;
+  color: var(--verde-oscuro);
+  font-size: clamp(19px, 2vw, 25px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.header-identidad p:last-child {
+  margin-bottom: 0;
+  color: #69776f;
+  font-size: 13px;
+}
+
+.header-acceso .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  color: var(--verde-oscuro);
+  background: var(--blanco);
+  border: 1px solid var(--verde-principal);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.header-acceso .btn:hover {
+  color: var(--blanco);
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  box-shadow: 0 5px 12px rgba(3, 73, 54, 0.16);
+}
+
+/* 4. MENÚ DE NAVEGACIÓN */
+.navbar-institucional {
+  background: var(--verde-oscuro);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-institucional .navbar-brand {
+  color: var(--blanco);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.navbar-institucional .navbar-brand:hover {
+  color: var(--dorado);
+}
+
+.navbar-institucional .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-institucional .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+.navbar-institucional .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-institucional .nav-link {
+  position: relative;
+  padding: 16px 13px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar-institucional .nav-link:hover,
+.navbar-institucional .nav-link.active {
+  color: var(--dorado);
+}
+
+.navbar-institucional .nav-link::after {
+  position: absolute;
+  right: 13px;
+  bottom: 7px;
+  left: 13px;
+  height: 2px;
+  background: var(--dorado);
+  content: "";
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.navbar-institucional .nav-link:hover::after,
+.navbar-institucional .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* 5. PORTADA PRINCIPAL */
+.hero-institucional {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  overflow: hidden;
+  color: var(--blanco);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(28, 145, 105, 0.45), transparent 35%),
+    linear-gradient(120deg, #033b2c 0%, #07563f 55%, #087557 100%);
+}
+
+.hero-institucional::before {
+  position: absolute;
+  top: -240px;
+  right: -90px;
+  width: 440px;
+  height: 440px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 35px rgba(255, 255, 255, 0.025),
+    0 0 0 75px rgba(255, 255, 255, 0.02);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-institucional::after {
+  position: absolute;
+  bottom: -170px;
+  left: 35%;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 65px 0;
+}
+
+.hero-etiqueta {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 8px 15px;
+  color: var(--blanco);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.hero-institucional h2 {
+  max-width: 680px;
+  margin-bottom: 20px;
+  color: var(--blanco);
+  font-size: clamp(36px, 4.3vw, 58px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.4px;
+}
+
+.hero-institucional p {
+  max-width: 590px;
+  margin-bottom: 26px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-institucional .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-institucional .btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-institucional .btn-warning {
+  color: #173b2c;
+  background: var(--dorado);
+  border-color: var(--dorado);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.hero-institucional .btn-warning:hover {
+  color: #173b2c;
+  background: #e2bf4d;
+  border-color: #e2bf4d;
+}
+
+.hero-institucional .btn-outline-light:hover {
+  color: var(--verde-oscuro);
+  background: var(--blanco);
+}
+
+.hero-panel {
+  padding: 28px 30px;
+  background: rgba(255, 255, 255, 0.105);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-top: 3px solid var(--dorado);
+  border-radius: 14px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(10px);
+}
+
+.hero-panel-titulo {
+  margin-bottom: 16px !important;
+  color: var(--blanco) !important;
+  font-size: 17px !important;
+  font-weight: 800;
+}
+
+.hero-region {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  color: var(--blanco);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hero-region:last-child {
+  padding-bottom: 4px;
+  border-bottom: none;
+}
+
+.hero-region i {
+  color: #e3bd42;
+  font-size: 18px;
+}
+
+/* 6. DASHBOARD EJECUTIVO */
+.seccion-dashboard {
+  padding: 64px 0 35px;
+  background: #f3f6f3;
+  color: #26382e;
+}
+
+.seccion-dashboard .titulo-seccion {
+  margin-bottom: 42px;
+}
+
+.titulo-seccion {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.titulo-seccion span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--verde-principal);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.titulo-seccion h2 {
+  margin: 0 0 12px;
+  color: var(--verde-oscuro);
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.titulo-seccion p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--gris-texto);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.tarjeta-indicador {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  height: 100%;
+  min-height: 145px;
+  padding: 24px 22px;
+  overflow: hidden;
+  background: var(--blanco);
+  border: 1px solid var(--borde-suave);
+  border-radius: 14px;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tarjeta-indicador::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: var(--dorado);
+  content: "";
+}
+
+.tarjeta-indicador:hover {
+  transform: translateY(-5px);
+  border-color: #bfd7ca;
+  box-shadow: 0 16px 32px rgba(3, 73, 54, 0.12);
+}
+
+.indicador-icono {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  color: var(--blanco);
+  background: linear-gradient(145deg, var(--verde-claro), var(--verde-oscuro));
+  border-radius: 15px;
+  font-size: 24px;
+  box-shadow: 0 7px 16px rgba(3, 73, 54, 0.18);
+}
+
+.indicador-comisarías,
+.indicador-comisarias,
+.indicador-efectivos,
+.indicador-patrulleros,
+.indicador-ejecución,
+.indicador-ejecucion {
+  background: linear-gradient(145deg, var(--verde-claro), var(--verde-oscuro));
+}
+
+.indicador-contenido {
+  min-width: 0;
+}
+
+.indicador-contenido p,
+.tarjeta-indicador p {
+  margin-bottom: 7px;
+  color: var(--gris-texto);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.indicador-contenido h3,
+.tarjeta-indicador h3 {
+  margin: 0;
+  color: var(--verde-oscuro);
+  font-size: clamp(27px, 2.3vw, 34px);
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.indicador-detalle {
+  display: block;
+  margin-top: 8px;
+  color: #7a887f;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Dashboard modelo ejecutivo */
+.seccion-dashboard .tarjeta-indicador {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 205px;
+  padding: 23px;
+  overflow: hidden;
+  border: 1px solid #dce6df;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(23, 77, 53, 0.055);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seccion-dashboard .tarjeta-indicador:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(23, 77, 53, 0.11);
+}
+
+.tarjeta-indicador-superior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.seccion-dashboard .indicador-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 13px;
+  background: #e8f0ea;
+  color: #174d35;
+  font-size: 1.55rem;
+  box-shadow: none;
+}
+
+.indicador-numero {
+  color: #d8e2da;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.seccion-dashboard .indicador-contenido p {
+  margin: 0 0 6px;
+  color: #617267;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.seccion-dashboard .indicador-contenido h3 {
+  margin: 0;
+  color: #174d35;
+  font-size: clamp(1.65rem, 2vw, 2.15rem);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.seccion-dashboard .indicador-detalle {
+  display: block;
+  margin-top: 7px;
+  color: #89968d;
+  font-size: 0.77rem;
+}
+
+.tarjeta-indicador-linea {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #174d35;
+}
+
+.tarjeta-indicador-2 .indicador-icono,
+.tarjeta-indicador-4 .indicador-icono {
+  background: #fbf3d8;
+  color: #997616;
+}
+
+.tarjeta-indicador-2 .tarjeta-indicador-linea,
+.tarjeta-indicador-4 .tarjeta-indicador-linea {
+  background: #d9b536;
+}
+
+.tarjeta-indicador-3 .indicador-icono {
+  background: #e8f0ea;
+  color: #216443;
+}
+
+/* Paneles inferiores del dashboard */
+.dashboard-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboard-titulo {
+  min-width: 0;
+}
+
+.dashboard-etiqueta,
+.dashboard-panel-etiqueta {
+  display: inline-block;
+  color: #216443;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-titulo h2 {
+  margin: 10px 0;
+  color: #174d35;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+}
+
+.dashboard-titulo p {
+  margin: 0;
+  color: #64746a;
+}
+
+.dashboard-actualizar {
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: 1px solid #174d35;
+  border-radius: 10px;
+  background: #174d35;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard-actualizar:hover:not(:disabled) {
+  background: #216443;
+  transform: translateY(-2px);
+}
+
+.dashboard-actualizar:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.dashboard-panel {
+  padding: 27px;
+  border: 1px solid #dce6df;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(23, 77, 53, 0.055);
+}
+
+.dashboard-panel-encabezado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dashboard-panel h3 {
+  margin: 8px 0;
+  color: #174d35;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.dashboard-panel-encabezado p {
+  margin: 0;
+  color: #7a887e;
+  font-size: 0.88rem;
+}
+
+.dashboard-panel-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fbf3d8;
+  color: #997616;
+  font-size: 1.4rem;
+}
+
+.ejecucion-resumen {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.ejecucion-label {
+  color: #718075;
+  font-size: 0.88rem;
+}
+
+.ejecucion-resumen h4 {
+  margin: 5px 0 0;
+  color: #174d35;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.ejecucion-periodo {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #f3f6f3;
+  color: #5d6e62;
+  font-size: 0.76rem;
+  text-align: right;
+}
+
+.dashboard-progress {
+  height: 12px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e9eee9;
+}
+
+.dashboard-progress .progress-bar {
+  border-radius: 20px;
+  background: linear-gradient(90deg, #174d35, #36805a, #d9b536);
+  transition: width 0.5s ease;
+}
+
+.ejecucion-leyenda {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  color: #7b897f;
+  font-size: 0.78rem;
+}
+
+.ejecucion-leyenda .bi-circle-fill {
+  color: #216443;
+  font-size: 0.65rem;
+}
+
+.presupuesto-montos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0ed;
+}
+
+.presupuesto-monto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.presupuesto-monto span {
+  color: #78867c;
+  font-size: 0.78rem;
+}
+
+.presupuesto-monto strong {
+  color: #174d35;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-panel-institucional {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  border-color: #174d35;
+  background: #174d35;
+  color: #fff;
+}
+
+.dashboard-panel-institucional::after {
+  position: absolute;
+  right: -45px;
+  bottom: -65px;
+  width: 180px;
+  height: 180px;
+  border: 22px solid rgba(217, 181, 54, 0.13);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.dashboard-panel-institucional .dashboard-panel-etiqueta {
+  color: #efd46f;
+}
+
+.dashboard-insignia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 25px 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--dorado);
+  font-size: 2.5rem;
+}
+
+.dashboard-panel-institucional h3 {
+  color: #fff;
+  font-size: 1.45rem;
+}
+
+.dashboard-panel-institucional > p {
+  color: #d8e5dc;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.dashboard-institucional-pie {
+  margin-top: auto;
+  padding-top: 22px;
+  color: #efd46f;
+  font-size: 0.8rem;
+}
+
+.dashboard-pie {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid #dce6df;
+  color: #758378;
+  font-size: 0.78rem;
+}
+
+/* 7. TARJETAS GENERALES DE COMISARÍAS */
+.tarjeta-comisaria {
+  height: 100%;
+  overflow: hidden;
+  background: var(--blanco);
+  border: 1px solid var(--borde-suave);
+  border-radius: 18px;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-comisaria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(16, 55, 43, 0.14);
+}
+
+.tarjeta-comisaria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tarjeta-comisaria .card-body {
+  padding: 24px;
+}
+
+.tarjeta-comisaria .card-title {
+  color: var(--verde-oscuro);
+  font-weight: 800;
+}
+
+.tarjeta-comisaria .card-text {
+  color: var(--gris-texto);
+}
+
+/* 8. BOTONES GENERALES */
+.btn {
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-warning {
+  color: #1f2925;
+  background: var(--dorado);
+  border-color: var(--dorado);
+}
+
+.btn-warning:hover {
+  color: #1f2925;
+  background: #c79f25;
+  border-color: #c79f25;
+}
+
+.btn-success {
+  background: var(--verde-principal);
+  border-color: var(--verde-principal);
+}
+
+.btn-success:hover {
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+}
+
+.btn-outline-success {
+  color: var(--verde-principal);
+  border-color: var(--verde-principal);
+}
+
+.btn-outline-success:hover {
+  color: var(--blanco);
+  background: var(--verde-principal);
+  border-color: var(--verde-principal);
+}
+
+/* 9. TABLAS */
+.table {
+  background: var(--blanco);
+  vertical-align: middle;
+}
+
+.table thead {
+  color: var(--blanco);
+  background: var(--verde-oscuro);
+}
+
+.table thead th {
+  padding: 15px;
+  color: var(--blanco);
+  background: var(--verde-oscuro);
+  border: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 14px 15px;
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover > * {
+  background: #eef6f1;
+}
+
+/* 10. FORMULARIOS */
+.form-control,
+.form-select {
+  min-height: 44px;
+  border: 1px solid #dce3df;
+  border-radius: 9px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 0 0.2rem rgba(8, 117, 87, 0.15);
+}
+
+.form-label {
+  color: var(--verde-oscuro);
+  font-weight: 700;
+}
+
+.form-check-input:checked {
+  background-color: var(--verde-principal);
+  border-color: var(--verde-principal);
+}
+
+/* 11. ALERTAS */
+.alert {
+  border-radius: 10px;
+}
+
+/* 12. PIE DE PÁGINA */
+.footer-institucional {
+  padding: 42px 0 22px;
+  color: rgba(255, 255, 255, 0.84);
+  background: #022f24;
+}
+
+.footer-institucional h3 {
+  color: var(--blanco);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.footer-institucional p {
+  line-height: 1.7;
+}
+
+.footer-enlaces {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.footer-enlaces a {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-enlaces a:hover {
+  color: var(--dorado);
+}
+
+.footer-institucional hr {
+  margin: 30px 0 20px;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.footer-copyright {
+  margin-bottom: 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* 13. MÓDULO COMISARÍAS */
+.pagina-comisarias {
+  padding-top: 42px;
+  padding-bottom: 60px;
+}
+
+.pagina-comisarias .comisarias-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.pagina-comisarias .comisarias-etiqueta {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--verde-principal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.pagina-comisarias .comisarias-titulo {
+  margin: 0;
+  color: var(--verde-oscuro);
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.pagina-comisarias .comisarias-subtitulo {
+  margin: 8px 0 0;
+  color: var(--gris-texto);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.pagina-comisarias .comisarias-boton-principal {
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Indicadores: texto espaciado e iconos visibles */
+.pagina-comisarias .comisarias-indicador {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  height: 100%;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--borde-suave);
+  border-top: 3px solid var(--verde-principal);
+  border-radius: 14px;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pagina-comisarias .comisarias-indicador:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 28px rgba(3, 73, 54, 0.12);
+}
+
+.pagina-comisarias .indicador-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  color: var(--verde-principal);
+  background: var(--verde-fondo);
+  border-radius: 12px;
+  font-size: 22px;
+  box-shadow: none;
+}
+
+/* No ocultar los iconos Bootstrap */
+.pagina-comisarias .indicador-icono i,
+.pagina-comisarias .comisarias-panel-icono i,
+.pagina-comisarias .comisaria-ficha-icono i {
+  display: inline-block;
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.pagina-comisarias .indicador-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  min-width: 0;
+}
+
+.pagina-comisarias .indicador-contenido span {
+  display: block;
+  margin: 0;
+  color: var(--gris-texto);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.pagina-comisarias .indicador-contenido strong {
+  display: block;
+  margin: 0;
+  color: var(--verde-oscuro);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.pagina-comisarias .indicador-contenido small {
+  display: block;
+  margin: 0;
+  color: #7a887f;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.pagina-comisarias .indicador-operativa {
+  border-top-color: #16845b;
+}
+
+.pagina-comisarias .indicador-mantenimiento {
+  border-top-color: #d4a017;
+}
+
+.pagina-comisarias .indicador-inoperativa {
+  border-top-color: #c24141;
+}
+
+/* Paneles del módulo */
+.pagina-comisarias .comisarias-panel {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--borde-suave);
+  border-radius: 14px;
+  box-shadow: var(--sombra-suave);
+}
+
+.pagina-comisarias .comisarias-panel-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 22px;
+  color: #fff;
+  background: var(--verde-oscuro);
+  border-bottom: 3px solid var(--dorado);
+}
+
+.pagina-comisarias .comisarias-panel-cabecera h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.pagina-comisarias .comisarias-panel-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--dorado);
+  font-size: 20px;
+}
+
+.pagina-comisarias .comisarias-panel .card-body {
+  padding: 22px;
+}
+
+.pagina-comisarias .comisarias-icono-seccion {
+  color: var(--verde-principal);
+  font-size: 18px;
+}
+
+.pagina-comisarias .comisarias-buscador {
+  position: relative;
+}
+
+.pagina-comisarias .comisarias-listado-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 28px 0 18px;
+}
+
+.pagina-comisarias .comisarias-listado-cabecera h3 {
+  margin: 0;
+  color: var(--verde-oscuro);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.pagina-comisarias .comisarias-contador {
+  display: inline-block;
+  padding: 6px 11px;
+  color: var(--verde-oscuro);
+  background: #e7f1e9;
+  border: 1px solid #d3e5d8;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Fichas de comisarías */
+.pagina-comisarias .comisaria-ficha {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #d6dee8;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pagina-comisarias .comisaria-ficha:hover {
+  border-color: #9aafc5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pagina-comisarias .comisaria-ficha-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.pagina-comisarias .comisaria-ficha-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  color: var(--verde-principal);
+  background: var(--verde-fondo);
+  border-radius: 12px;
+  font-size: 21px;
+}
+
+.pagina-comisarias .comisaria-ficha-contenido {
+  padding: 16px;
+}
+
+.pagina-comisarias .comisaria-region {
+  display: inline-block;
+  padding: 6px 10px;
+  color: var(--verde-oscuro);
+  background: #e7f1e9;
+  border: 1px solid #d3e5d8;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pagina-comisarias .comisaria-ficha-titulo {
+  margin: 8px 0 14px;
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.pagina-comisarias .comisaria-estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pagina-comisarias .comisaria-estado-operativa {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.pagina-comisarias .comisaria-estado-mantenimiento {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.pagina-comisarias .comisaria-estado-inoperativa {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.pagina-comisarias .comisaria-estado-desconocida {
+  color: #475569;
+  background: #e2e8f0;
+}
+
+.pagina-comisarias .comisaria-punto {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.pagina-comisarias .comisaria-dato {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: var(--gris-texto);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.pagina-comisarias .comisaria-dato > i {
+  flex: 0 0 20px;
+  width: 20px;
+  margin-top: 3px;
+  color: #475569;
+  text-align: center;
+}
+
+.pagina-comisarias .comisaria-dato > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.pagina-comisarias .comisaria-dato small {
+  display: block;
+  margin-bottom: 3px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.pagina-comisarias .comisaria-dato p {
+  margin: 0;
+  color: #334155;
+  overflow-wrap: anywhere;
+}
+
+.pagina-comisarias .comisaria-ficha-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.pagina-comisarias .comisaria-ficha-acciones .btn {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.pagina-comisarias .badge-region-comisaria {
+  display: inline-block;
+  padding: 6px 10px;
+  color: var(--verde-oscuro);
+  background: #e7f1e9;
+  border: 1px solid #d3e5d8;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* 14. DISEÑO RESPONSIVO: TABLET */
+@media (max-width: 991px) {
+  .navbar-institucional .nav-link {
+    padding: 12px 8px;
+  }
+
+  .navbar-institucional .nav-link::after {
+    right: auto;
+    bottom: 5px;
+    left: 8px;
+    width: 45px;
+  }
+
+  .hero-panel {
+    margin-top: 8px;
+  }
+
+  .footer-enlaces {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* 15. DISEÑO RESPONSIVO: CELULARES */
+@media (max-width: 576px) {
+  .header-institucional {
+    padding: 14px 0;
+  }
+
+  .header-contenido {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .header-identidad {
+    gap: 12px;
+  }
+
+  .header-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .header-logo span {
+    font-size: 14px;
+  }
+
+  .header-identidad h1 {
+    font-size: 18px;
+  }
+
+  .header-superior {
+    font-size: 11px;
+  }
+
+  .header-identidad p:last-child {
+    font-size: 12px;
+  }
+
+  .header-acceso,
+  .header-acceso .btn {
+    width: 100%;
+  }
+
+  .hero-institucional {
+    min-height: auto;
+  }
+
+  .hero-contenido {
+    padding: 48px 0;
+  }
+
+  .hero-institucional h2 {
+    font-size: 34px;
+    letter-spacing: -0.7px;
+  }
+
+  .hero-institucional p {
+    font-size: 15px;
+  }
+
+  .hero-institucional .btn {
+    width: 100%;
+  }
+
+  .hero-panel {
+    padding: 22px;
+  }
+
+  .seccion-dashboard {
+    padding: 38px 0 25px;
+  }
+
+  .seccion-dashboard .titulo-seccion {
+    margin-bottom: 28px;
+  }
+
+  .titulo-seccion h2 {
+    font-size: 29px;
+  }
+
+  .tarjeta-indicador {
+    min-height: 115px;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .indicador-icono {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 20px;
+  }
+
+  .indicador-contenido h3,
+  .tarjeta-indicador h3 {
+    font-size: 26px;
+  }
+
+  .footer-enlaces {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard-encabezado {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-actualizar {
+    width: 100%;
+  }
+
+  .seccion-dashboard .tarjeta-indicador {
+    min-height: 185px;
+    padding: 18px;
+  }
+
+  .dashboard-panel {
+    padding: 21px;
+  }
+
+  .presupuesto-montos {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-pie {
+    flex-direction: column;
+  }
+
+  .pagina-comisarias {
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+
+  .pagina-comisarias .comisarias-encabezado {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pagina-comisarias .comisarias-encabezado > button {
+    width: 100%;
+  }
+
+  .pagina-comisarias .comisarias-indicador {
+    padding: 17px;
+  }
+
+  .pagina-comisarias .comisarias-panel .card-body {
+    padding: 16px;
+  }
+
+  .pagina-comisarias .comisaria-ficha-contenido {
+    padding: 19px;
+  }
+}
+
+/* 16. REDUCIR ANIMACIONES SI EL USUARIO LO PREFIERE */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .seccion-dashboard .tarjeta-indicador,
+  .dashboard-actualizar,
+  .dashboard-progress .progress-bar,
+  .pagina-comisarias .comisarias-indicador,
+  .pagina-comisarias .comisaria-ficha,
+  .pagina-comisarias .btn {
+    transition: none !important;
+  }
+}
+/* ==================================================
+   SIGI-010 | MEJORA VISUAL DEL MÓDULO DE COMISARÍAS
+   Mantiene las funciones y estilos de los demás módulos
+   ================================================== */
+
+/* Fondo y espaciado general */
+.pagina-comisarias {
+  padding: 24px;
+  color: #1f2925;
+}
+
+.pagina-comisarias h1 {
+  color: #034936;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.pagina-comisarias h2,
+.pagina-comisarias h3 {
+  color: #034936;
+}
+
+/* Indicadores superiores */
+.pagina-comisarias .comisarias-indicador {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  min-height: 112px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-top: 4px solid #087557;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(3, 73, 54, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pagina-comisarias .comisarias-indicador:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(3, 73, 54, 0.10);
+}
+
+.pagina-comisarias .indicador-icono {
+  display: flex;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  color: #087557;
+  background: #edf5ef;
+  border-radius: 13px;
+  font-size: 23px;
+}
+
+.pagina-comisarias .indicador-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
+.pagina-comisarias .indicador-contenido span {
+  display: block;
+  margin: 0;
+  color: #52645a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.pagina-comisarias .indicador-contenido strong {
+  display: block;
+  margin: 0;
+  color: #034936;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pagina-comisarias .indicador-contenido small {
+  display: block;
+  margin: 0;
+  color: #718078;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Paneles de búsqueda y directorio */
+.pagina-comisarias .comisarias-panel,
+.pagina-comisarias .comisarias-directorio,
+.pagina-comisarias .directorio-comisarias {
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(3, 73, 54, 0.04);
+}
+
+/* Campos de búsqueda y selección */
+.pagina-comisarias .form-control,
+.pagina-comisarias .form-select {
+  min-height: 42px;
+  border: 1px solid #d5e1d9;
+  border-radius: 9px;
+}
+
+.pagina-comisarias .form-control:focus,
+.pagina-comisarias .form-select:focus {
+  border-color: #087557;
+  box-shadow: 0 0 0 3px rgba(8, 117, 87, 0.12);
+}
+
+/* Botones del módulo */
+.pagina-comisarias .btn {
+  border-radius: 9px;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pagina-comisarias .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Tarjetas: conservamos la estructura existente */
+.pagina-comisarias .card {
+  overflow: hidden;
+  border: 1px solid #d5e1ec;
+  border-radius: 13px;
+  box-shadow: 0 3px 9px rgba(31, 41, 37, 0.045);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pagina-comisarias .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(31, 41, 37, 0.09);
+}
+
+.pagina-comisarias .card-header {
+  padding: 14px 16px;
+  background: #f5f8fb;
+  border-bottom: 1px solid #dce5ef;
+}
+
+.pagina-comisarias .card-body {
+  padding: 16px;
+}
+
+.pagina-comisarias .card-footer {
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-top: 1px solid #e0e8f0;
+}
+
+/* Estados: operativa, mantenimiento e inoperativa */
+.pagina-comisarias .badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Iconos de las fichas */
+.pagina-comisarias .comisaria-ficha-icono,
+.pagina-comisarias .comisarias-panel-icono {
+  color: #087557;
+}
+
+/* Adaptación a pantallas medianas */
+@media (max-width: 992px) {
+  .pagina-comisarias {
+    padding: 18px;
+  }
+
+  .pagina-comisarias .comisarias-indicador {
+    padding: 16px;
+    gap: 12px;
+  }
+}
+
+/* Adaptación a móviles */
+@media (max-width: 576px) {
+  .pagina-comisarias {
+    padding: 12px;
+  }
+
+  .pagina-comisarias .comisarias-indicador {
+    min-height: 96px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .pagina-comisarias .indicador-icono {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .pagina-comisarias .indicador-contenido strong {
+    font-size: 26px;
+  }
+
+  .pagina-comisarias .card-body {
+    padding: 13px;
+  }
+}

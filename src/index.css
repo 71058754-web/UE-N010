@@ -1,0 +1,124 @@
+
+/* ========================================
+   SIGI-010 | ESTILOS GENERALES
+   Sistema de Gestión Institucional PNP
+   ======================================== */
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #26332e;
+  background-color: #f3f6f4;
+
+  --verde-oscuro: #123d2b;
+  --verde-institucional: #20563d;
+  --verde-medio: #2e704e;
+  --verde-claro: #e8f0eb;
+  --fondo-general: #f3f6f4;
+  --blanco: #ffffff;
+  --texto-principal: #26332e;
+  --texto-secundario: #64736a;
+  --borde-suave: #dce5df;
+  --dorado: #d4af37;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--fondo-general);
+  color: var(--texto-principal);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+.btn,
+a {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Colores institucionales para botones de Bootstrap */
+.btn-success {
+  background-color: var(--verde-institucional);
+  border-color: var(--verde-institucional);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+}
+
+.btn-outline-success {
+  color: var(--verde-institucional);
+  border-color: var(--verde-institucional);
+}
+
+.btn-outline-success:hover {
+  color: var(--blanco);
+  background-color: var(--verde-institucional);
+  border-color: var(--verde-institucional);
+}
+
+/* Campos de formularios */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--verde-medio);
+  box-shadow: 0 0 0 0.2rem rgba(32, 86, 61, 0.15);
+}
+
+/* Accesibilidad */
+:focus-visible {
+  outline: 3px solid rgba(212, 175, 55, 0.75);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
