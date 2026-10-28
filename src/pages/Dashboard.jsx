@@ -1,5 +1,5 @@
 
-import Header from "../components/Header";
+import Header from "../components/header.jsx";
 import Navbar from "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import Footer from "../components/Footer";
