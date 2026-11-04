@@ -1,0 +1,117 @@
+{
+  "regiones": [
+    {
+      "id": "1",
+      "nombre": "Junín",
+      "codigo": "JUN"
+    },
+    {
+      "id": "2",
+      "nombre": "Pasco",
+      "codigo": "PAS"
+    },
+    {
+      "id": "3",
+      "nombre": "Huancavelica",
+      "codigo": "HUV"
+    }
+  ],
+  "comisarias": [
+    {
+      "id": "1",
+      "nombre": "Comisaría PNP Huancayo",
+      "regionId": "1",
+      "provincia": "Huancayo",
+      "distrito": "Huancayo",
+      "direccion": "Dato de prueba",
+      "telefono": "Dato de prueba",
+      "categoria": "Comisaría básica",
+      "efectivos": 120,
+      "patrulleros": 4,
+      "motocicletas": 6,
+      "estado": "Operativa"
+    },
+    {
+      "id": "3",
+      "nombre": "Comisaría PNP Chaupimarca",
+      "regionId": "2",
+      "provincia": "Pasco",
+      "distrito": "Chaupimarca",
+      "direccion": "Dato de prueba",
+      "telefono": "Dato de prueba",
+      "categoria": "Comisaría básica",
+      "efectivos": 75,
+      "patrulleros": 2,
+      "motocicletas": 3,
+      "estado": "Operativa"
+    },
+    {
+      "id": "4",
+      "nombre": "Comisaría PNP Huancavelica",
+      "regionId": "3",
+      "provincia": "Huancavelica",
+      "distrito": "Huancavelica",
+      "direccion": "Dato de prueba",
+      "telefono": "Dato de prueba",
+      "categoria": "Comisaría básica",
+      "efectivos": 80,
+      "patrulleros": 3,
+      "motocicletas": 4,
+      "estado": "Operativa"
+    },
+    {
+      "nombre": "Comisaria PNP El Tambo",
+      "regionId": 1,
+      "provincia": "el tambo",
+      "distrito": "el tambo",
+      "categoria": "A",
+      "direccion": "tambo",
+      "telefono": "",
+      "estado": "Operativa",
+      "id": "zsDjQpK_PLU"
+    },
+    {
+      "nombre": "Comisaria de Chilca",
+      "regionId": 1,
+      "provincia": "Huancayo",
+      "distrito": "Chilca",
+      "categoria": "A",
+      "direccion": "Pasaje san andres",
+      "telefono": "1231451",
+      "estado": "Operativa",
+      "id": "Ozh7ksYaF_Q"
+    }
+  ],
+    "presupuestos": [
+    {
+      "id": "1",
+      "anio": 2026,
+      "pia": 22227929,
+      "pim": 25140549,
+      "certificado": 23827787.77,
+      "compromisoAnual": 23143691.36,
+      "devengado": 18992324.99,
+      "girado": 0,
+      "fechaActualizacion": "2026-09-30",
+      "periodo": "Enero - Setiembre",
+      "fuenteFinanciamiento": "Recursos Ordinarios"
+    }
+  ],
+  "partidasPresupuestales": [],
+ "personal": [
+  {
+    "dni": "00000000",
+    "grado": "S1 PNP",
+    "nombres": "PERSONAL",
+    "apellidos": "DE PRUEBA",
+    "regionId": "1",
+    "dependencia": "DEPENDENCIA DE PRUEBA",
+    "cargo": "ADMINISTRATIVO",
+    "estado": "Activo",
+    "id": "personal-demo-01"
+  }
+],
+  "noticias": [],
+  "documentos": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -30,7 +30,6 @@ dist-ssr
 !.env.sample
 
 # Local databases and backups
-db.json
 *.sqlite
 *.sqlite3
 *.db
